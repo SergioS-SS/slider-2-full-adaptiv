@@ -28,7 +28,7 @@ body {
 .slider-body {
 	overflow: hidden;
 	/* overflow: hidden для .slider-row  */
-	margin: 0 35px;
+	margin: 0 37px;
 	/* margin для кнопок, чтобы остались в контейнере */
 }
 
@@ -91,7 +91,7 @@ body {
 }
 
 .btn-left {
-	left: 0px;
+	left: 2px;
 	clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
 }
 
@@ -100,7 +100,7 @@ body {
 }
 
 .btn-right {
-	right: 0;
+	right: 2px;
 	clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
 }
 
@@ -144,6 +144,6 @@ body {
 
 @media (max-width: 576px) {
 	.container {
-		max-width: none;
+		max-width: 100%;
 	}
 }
