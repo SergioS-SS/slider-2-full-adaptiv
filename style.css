@@ -27,7 +27,9 @@ body {
 
 .slider-body {
 	overflow: hidden;
-	/*  .slider-body нужен, чтобы сделать overflow: hidden для .slider-row  */
+	/* overflow: hidden для .slider-row  */
+	margin: 0 35px;
+	/* margin для кнопок, чтобы остались в контейнере */
 }
 
 .slider-row {
@@ -89,21 +91,21 @@ body {
 }
 
 .btn-left {
-	left: -35px;
+	left: 0px;
 	clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
 }
 
 .btn-left:active {
-	left: -40px;
+	left: -30px;
 }
 
 .btn-right {
-	right: -35px;
+	right: 0;
 	clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
 }
 
 .btn-right:active {
-	right: -40px;
+	right: -30px;
 }
 
 
