@@ -1,3 +1,5 @@
+/* ?----------------------- Стили ТОЛЬКО для демонстрации ---------------- */
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -16,11 +18,7 @@ body {
 	align-items: center;
 }
 
-.slider p {
-	font-size: 36px;
-	font-weight: bold;
-	color: #fff;
-}
+/* ?----------------------------- Стили для слайдера ---------------------- */
 
 .slider {
 	position: relative;
@@ -29,7 +27,7 @@ body {
 
 .slider-body {
 	overflow: hidden;
-	width: 100%;
+	/*  .slider-body нужен, чтобы сделать overflow: hidden для .slider-row  */
 }
 
 .slider-row {
@@ -41,25 +39,16 @@ body {
 	transition: all 0.7s ease-out 0s;
 }
 
-.slider-column {
+.slider-item {
 	flex: 0 0 33.333%;
 	background-color: rgb(205, 208, 216);
-	padding-top: 20px;
-}
-
-.slider-column:hover .slider-image img {
-	transform: scale(1.1);
-}
-
-.slider-item {
-	height: 100%;
-	padding: 0 20px;
+	padding: 20px 20px 0;
 }
 
 .slider-image {
+	position: relative;
 	width: 100%;
 	height: 250px;
-	position: relative;
 	overflow: hidden;
 }
 
@@ -68,15 +57,23 @@ body {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	top: 0;
-	left: 0;
 	transform: scale(1);
 	transition: all 0.9s cubic-bezier(0.5, 1, 0.89, 1) 0s;
+	will-change: transform;
+}
+
+.slider-item:hover .slider-image img {
+	transform: scale(1.1);
 }
 
 .slider-title {
 	padding: 15px 0;
+	font-size: 36px;
+	font-weight: bold;
+	color: #fff;
 }
+
+/* ?----------------- buttons -------------------- */
 
 .slider-btn {
 	position: absolute;
@@ -109,14 +106,18 @@ body {
 	right: -40px;
 }
 
+
+/* ?------- Размеры контейнера + количесво слайдов в контейнере на разных экранах ------- */
+
+
 @media (max-width: 992px) {
-	.slider-column {
+	.slider-item {
 		flex: 0 0 50%;
 	}
 }
 
 @media (max-width: 768px) {
-	.slider-column {
+	.slider-item {
 		flex: 0 0 100%;
 	}
 }
